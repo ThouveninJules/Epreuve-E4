@@ -8,28 +8,10 @@
     <title>Inscription</title>
 </head>
 <body>
-    <?php
-        $servername = 'localhost';
-        $username = 'root';
-        $password = '';
-            
-        //On essaie de se connecter
-        try{
-            $dbco = new PDO("mysql:host=$servername;dbname=bts2e4", $username, $password);
-            //On définit le mode d'erreur de PDO sur Exception
-            $dbco->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        }
-        
-        /*On capture les exceptions si une exception est lancée et on affiche
-         *les informations relatives à celle-ci*/
-        catch(PDOException $e){
-          echo "Erreur : " . $e->getMessage();
-        }
-    ?>
     <h1>Inscription</h1>
     <br><br>
     <div class="form-inscr">
-        <form action='#' method="get">
+        <form action='form_inscription.php' method="get">
             <div class="form-inscr-pseudo">
                 <label for="pseudo">Entrez votre pseudo :&nbsp&nbsp</label>
                 <input type="text" name="pseudo" id="pseudo" required>
@@ -64,7 +46,7 @@
                 <label for="mdp2">Validez le mot de passe :&nbsp&nbsp</label>
                 <input type="password" name="mdp2" id="mdp2" required>
             </div>
-            <br><br>
+            <br><br><br>
             <div class="form-inscr-btn">
                 <input type="submit" value="Valider" class="button" accesskey="enter">
                 <a href="./connexion.php">
@@ -73,24 +55,5 @@
             </div>
         </form>
     </div>
-
-    <?php
-    
-        $pseudo = $_GET["pseudo"];
-        $prenom = $_GET["prenom"];
-        $nom = $_GET["nom"];
-        $email = $_GET["email"];
-        $mdp = $_GET["mdp"];
-        $mdp2 = $_GET["mdp2"];
-        $naiss = $_GET["naiss"];
-        $DateAndTime = date('m-d-Y h:i:s', time());
-
-        if($mdp == $mdp2)
-        {
-            $sql = "INSERT INTO users (nom, prenom, pseudo, email, mdp, naissance, creation_date, last_connexion) VALUES ($nom, $prenom, $pseudo, $email, $mdp, $naiss, $DateAndTime, $DateAndTime);";
-            $dbco->exec($sql);
-        }
-    
-    ?>
 </body>
 </html>
