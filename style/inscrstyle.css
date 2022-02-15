@@ -1,7 +1,7 @@
 h1 {
 
     text-align: center;
-    color: rgb(0, 0, 0);
+    /* color: rgb(0, 0, 0); */
     font-weight: bold;
     font-size: 45px;
 
@@ -16,8 +16,17 @@ h1 {
 
 body {
     
-    margin-top: 7%;
+    margin: 13% 0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #b13232;
+    color: #ffffff;
+
+}
+
+input {
+
+    background-color: #ec4141;
+    color: #ffffff;
 
 }
 
@@ -28,8 +37,8 @@ body {
 }
 
 input[type=button], input[type=submit], input[type=reset] {
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
+    background-color: #b13232;
+    color: rgb(255, 255, 255); 
     border-color: rgb(59, 59, 59);
     border-radius: 3px;
     border-style: solid;
@@ -37,4 +46,4 @@ input[type=button], input[type=submit], input[type=reset] {
     text-decoration: none;
     cursor: pointer;
     font-size: 15px;
-  }
+}
