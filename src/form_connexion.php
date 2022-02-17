@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connection</title>
+    <title>Connexion</title>
 </head>
 <body>
 <?php
@@ -62,12 +62,21 @@
 
         if(($number1 == 1 || $number2 == 1) && $usermdp == 1)
         {
+            // if($number1 == 1)
+            // {
+            //     $_POST['ident'] = $ident;
+            // }
+            // else if($number2 == 1)
+            // {
+            //     $_POST['ident'] = $ident;
+            // }
             header('Location: accueil.php');
         }    
-        else{
+        else
+        {
            echo "Identifiant ou mot de passe incorrect !";
             ?>
-            <a href="connexion.php">Revenir à la connection</a>
+            <a href="connexion.php">Revenir à la connexion</a>
             <?php
         }
     ?>
