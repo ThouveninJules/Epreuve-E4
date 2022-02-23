@@ -14,14 +14,15 @@
     
     ?>
     <div class="header">
-        <h1>Bien le bonjour !
-        <a href="./connexion.php" class = "buttonc">
-            <button>Connexion</button>
-        </a>
-        <a href="./inscription.php" class = "buttoni">
-            <button>Inscription</button>
-        </a>
-        </h1>
+        <form action="#">
+            <h1>Bien le bonjour !
+            <a href="./connexion.php">
+                <input type="button" value="Connexion" class="buttonc"></a>
+            <a href="./inscription.php">
+                <input type="button" value="Inscription" class="buttoni">
+            </a>
+            </h1>
+        </form>    
     </div>  
     <hr>
 </body>

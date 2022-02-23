@@ -22,6 +22,12 @@ input {
 
 }
 
+form {
+
+    margin-left: 12px;
+
+}
+/* 
 button {
 
     text-align: right;
@@ -34,7 +40,7 @@ button {
     border-radius: 3px;
     border-style: solid;
 
-}
+} */
 
 .buttonc {
 
@@ -44,7 +50,7 @@ button {
 
 .buttoni {
 
-    margin-left: 2%;
+    margin-left: 1%;
 
 }
 
@@ -57,13 +63,13 @@ hr {
 }
 
 input[type=button], input[type=submit], input[type=reset] {
+    text-align: right;
+    padding: 5px 10px;
+    cursor: pointer;
     background-color: #373a63;
+    vertical-align: middle;
     color: rgb(255, 255, 255); 
     border-color: rgb(158, 158, 158);
     border-radius: 3px;
     border-style: solid;
-    padding: 10px 20px;
-    text-decoration: none;
-    cursor: pointer;
-    font-size: 15px;
 }
